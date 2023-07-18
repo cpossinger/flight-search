@@ -12,18 +12,10 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <ul>
-      <a href="#about-the-project">About The Project</a>
-      </ul>
-    </li>
-    <li>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#build-and-run">Build and Run</a></li>
-      </ul>
-    </li>
-    <li><a href="#contact">Contact</a></li>
+    <li> <a href="#about-the-project">About The Project</a> </li>
+    <li> <a href="#prerequisites">Prerequisites</a> </li>
+    <li> <a href="#build-and-run">Build and Run</a> </li> 
+    <li> <a href="#contact">Contact</a> </li>
   </ol>
 </details>
 
@@ -33,7 +25,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-* Frontend: [![Angular][Angular.io]][Angular-url] + [![Nginx][Nginx]][Nginx]
+* Frontend: [Angular.io][Angular-url] + [Nginx][Nginx-url]
   - Custom CSS Soho Light theme
   - Custom favicon :)
 
@@ -47,7 +39,7 @@
     - Shows relevant information for each matching flight
     - All flight times are in the GMT-5 timezone
 
-* Backend: [![NestJS][NestJS]][NestJS-url] + [![Node.js][Node.js]][Node.js-url]
+* Backend: [NestJS][NestJS-url] + [Node.js][Node.js-url]
   - /find-flights: 
     - Query the postgresql flights table and return an array of objects that match the origin and destination url query parameters
 
@@ -58,7 +50,7 @@
     - Convert each object to a formatted string
     - Supply the resulting array of strings to the AutoComplete options 
 
-* Database: [![Postgres][Postgres]][Postgres-url]
+* Database: [Postgres][Postgres-url]
   - flights_new.csv
     - Created using join_airport_data.R
     - Joins open source data from [OurAirports](https://ourairports.com/data/) to add the origin/destination station's city and region to the original flights.csv
@@ -74,7 +66,8 @@
 
 ### Prerequisites
 
-* Docker, Docker Compose
+* Docker
+* Docker Compose
 
 ### Build and Run
 
@@ -96,8 +89,7 @@
 <!-- CONTACT -->
 ## Contact
 
-Camden Possinger-  - cposs2000@gmail.com
-Project Link: [https://github.com/cpossinger/fligh-search](https://github.com/cpossinger/fligh-search)
+Camden Possinger: cposs2000@gmail.com
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -110,7 +102,7 @@ Project Link: [https://github.com/cpossinger/fligh-search](https://github.com/cp
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/camden-possinger-82780b1a1/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular.io]: ![Angular.io](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 [Angular-url]: https://angular.io/
 [NestJS]: ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
 [NestJS-url]: https://nestjs.com/
