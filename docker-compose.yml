@@ -1,0 +1,28 @@
+services:
+  # Create frontend container
+  frontend: # Name of our service
+    build: ./frontend # path to dockerfile
+    ports: # Port binding to host from docker container
+      - "80:80" # Bind port 3000 of host to 3000 of container
+    container_name: frontend
+    restart: always # What to do if container crashes
+  backend:
+    # Create backend container  
+    build: ./backend
+    ports:
+      - "3000:3000"
+    container_name: backend
+    restart: always
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=delta
+      - POSTGRES_DB=flight_search
+    volumes:
+      - ./data/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data/flights_new.csv:/docker-entrypoint-initdb.d/flights_new.csv
+    ports:
+      - "5432:5432"
+    container_name: db
+    restart: always
+  

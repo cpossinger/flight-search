@@ -1,0 +1,47 @@
+<title>Flight Search</title>
+<!-- Toolbar -->
+<p-toolbar>
+  <div class="flex flex-row justify-content-between align-content-center">
+    <div class="flex w-2">
+      <img
+        src="../assets/images/delta_c_r.png"
+        class="logo"
+        alt="Delta Air Lines Logo"
+      />
+    </div>
+
+    <div
+      style="margin-right: 4.25%"
+      class="flex flex-row justify-content-between gap-3"
+    >
+      <app-select-station
+        (selectedStation)="receiveSelectedOrigin($event)"
+        [stationType]="'origin'"
+      ></app-select-station>
+      <span
+        style="transform: rotate(90deg); font-size: 30px; margin-right: 2.5%"
+        class="material-symbols-outlined"
+        >flight</span
+      >
+      <app-select-station
+        (selectedStation)="receiveSelectedDestination($event)"
+        [stationType]="'destination'"
+      ></app-select-station>
+    </div>
+
+    <div class="flex align-self-center">
+      <small style="color: gray"
+        >* All flight times are in the GMT-5 timezone</small
+      >
+    </div>
+  </div>
+</p-toolbar>
+
+<main>
+  <app-list-flights
+    [selectedOrigin]="selectedOrigin"
+    [selectedDestination]="selectedDestination"
+  ></app-list-flights>
+</main>
+
+<router-outlet></router-outlet>

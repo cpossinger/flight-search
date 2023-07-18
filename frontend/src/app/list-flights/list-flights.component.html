@@ -1,0 +1,53 @@
+<p-dataView
+  #dv
+  [value]="flights"
+  [paginator]="true"
+  [rows]="4"
+  [alwaysShowPaginator]="false"
+  [emptyMessage]="dataViewEmptyMessage"
+>
+  <ng-template let-flight pTemplate="listItem">
+    <div class="col-12">
+      <div class="grid align-items-center justify-content-evenly">
+        <div class="col-3 text-center">
+          <h1 style="margin-bottom: 0%"> {{ flight.origin }} </h1>
+          <span> {{ flight.origin_city }}, {{ flight.origin_region }} </span>
+          <h3 class="date-heading">
+            {{ flight.out_gmt | date: 'EEEE, MMM d, y' }}
+          </h3>
+          <h2 class="time-heading">
+            {{ flight.out_gmt | date: 'shortTime' }}
+          </h2>
+        </div>
+
+        <div class="col-2 text-center">
+          <div class="flex flex-column">
+            <h3> DL {{ flight.flt_num }} </h3>
+            <span
+              style="transform: rotate(90deg)"
+              class="material-symbols-outlined"
+              >flight</span
+            >
+            <span>
+              {{ getFlightDuration(flight.out_gmt, flight.in_gmt) }}
+            </span>
+          </div>
+        </div>
+
+        <div class="col-3 text-center">
+          <h1 style="margin-bottom: 0%"> {{ flight.destination }} </h1>
+          <span>
+            {{ flight.destination_city }}, {{ flight.destination_region }}
+          </span>
+          <h3 class="date-heading">
+            {{ flight.in_gmt | date: 'EEEE, MMM d, y' }}
+          </h3>
+          <h2 class="time-heading">
+            {{ flight.in_gmt | date: 'shortTime' }}
+          </h2>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>
+<div class="flex flex-row justify-content-end"> </div>

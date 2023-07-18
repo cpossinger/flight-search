@@ -1,0 +1,13 @@
+<p-autoComplete
+  [suggestions]="stations"
+  [showClear]="true"
+  [emptyMessage]="'No airports found'"
+  [placeholder]="'Search for ' + stationType + ' airport'"
+  [showEmptyMessage]="true"
+  [autoHighlight]="true"
+  (onSelect)="sendSelectedStation($event)"
+  (onClear)="clearSelectedStation()"
+  (completeMethod)="suggestStations($event)"
+>
+  class="custom-autocomplete"
+</p-autoComplete>
