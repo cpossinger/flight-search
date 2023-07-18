@@ -25,7 +25,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-* Frontend: [Angular.io][Angular-url] + [Nginx][Nginx-url]
+* Frontend:[![Angular][Angular]][Angular-url] + [[!Nginx]][Nginx-url]
   - Custom CSS Soho Light theme
   - Custom favicon :)
 
@@ -39,7 +39,7 @@
     - Shows relevant information for each matching flight
     - All flight times are in the GMT-5 timezone
 
-* Backend: [NestJS][NestJS-url] + [Node.js][Node.js-url]
+* Backend: [[!NestJS][NestJS]][NestJS-url] + [[!Node.js][Node.js]][Node.js-url]
   - /find-flights: 
     - Query the postgresql flights table and return an array of objects that match the origin and destination url query parameters
 
@@ -50,7 +50,7 @@
     - Convert each object to a formatted string
     - Supply the resulting array of strings to the AutoComplete options 
 
-* Database: [Postgres][Postgres-url]
+* Database: [[!Postgres][Postgres]][Postgres-url]
   - flights_new.csv
     - Created using join_airport_data.R
     - Joins open source data from [OurAirports](https://ourairports.com/data/) to add the origin/destination station's city and region to the original flights.csv
@@ -75,13 +75,16 @@
    ```sh
    git clone https://github.com/cpossinger/flight-search.git
    ```
-2. Build and Run
+
+2. Make sure ports 80, 3000, and 5432 are free 
+
+3. Build and Run
    ```sh
     cd flight-search
     docker compose up --build
    ```
-3. Go to http://localhost:80 in your browser
 
+4. Go to http://localhost:80 in your browser
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +105,7 @@ Camden Possinger: cposs2000@gmail.com
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/camden-possinger-82780b1a1/
-[Angular.io]: ![Angular.io](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+[Angular]: (https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 [Angular-url]: https://angular.io/
 [NestJS]: ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
 [NestJS-url]: https://nestjs.com/
