@@ -74,15 +74,17 @@
    git clone https://github.com/cpossinger/flight-search.git
    ```
 
-2. Make sure ports 80, 3000, and 5432 are free 
+2. Make sure ports 80, 3000, and 5432 are free
 
-3. Build and Run
+3. Make sure docker is running
+
+4. Build and Run
    ```sh
     cd flight-search
     docker compose up --build
    ```
 
-4. Go to http://localhost:80 in your browser
+5. Go to http://localhost:80 in your browser
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
