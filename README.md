@@ -4,8 +4,6 @@
 <br />
 <div align="center">
 <h3 align="center">Delta Flight Search</h3>
-
-  <a href="http://35.233.254.71">Google Cloud Kubernetes Cluster</a>
 </div>
 
 
